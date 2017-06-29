@@ -55,6 +55,15 @@ export class AppComponent {
     }
   }
 
+  getWindow() {
+      console.log(this.myWindow.document);
+      console.log(this.myWindow.document.body.childNodes);
+      console.log(this.myWindow.document.all);
+      const message1 = this.myWindow.document.getElementById('messageDisplay');
+      message1.innerHTML = 'text';
+  }
+
+
   stopTimer() {
     this.running = false;
     this.totalSecondsDefined = this.ticks;

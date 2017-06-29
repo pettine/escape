@@ -33,16 +33,25 @@
             <div class="form-inline">
                 <label>Message</label>
                 <input #inputMessage class="form-control" [(ngModel)]="message" />
+                <button class="btn" (click)="getWindow()">Open</button>
             </div>
         </div>
     </div>
 
     <div class="col-sm-6">
         <div>
-            <h1 [class.blink-me]="warning" [class.text-danger]="warning" class="clock">{{formattedTime}}</h1>
+            <h1 [class.blink-me]="warning" [class.text-danger]="warning" class="clock">
+                <label id="timeCounter">
+                {{formattedTime}}
+                </label>
+            </h1>
         </div>
         <div>
-            <h1>{{message}}</h1>
+            <h1>
+                <label id="messageDisplay">
+            {{message}}
+            </label>
+            </h1>
         </div>
     </div>
 
